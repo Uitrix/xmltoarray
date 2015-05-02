@@ -1,0 +1,18 @@
+{
+    "name": "uitrix/yii2-xmltoarray",
+    "description": "Small class converting xml to associative array",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","xmltoarray","xml","converter"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Uitrix",
+            "email": "me.uitrix@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "uitrix\\xmltoarray\\": "src"
+        }
+    }
+}
