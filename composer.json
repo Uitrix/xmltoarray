@@ -12,7 +12,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "uitrix\\xmltoarray\\": "src"
+            "uitrix\\xmltoarray\\": ""
         }
     }
 }
