@@ -1,4 +1,4 @@
-Xml2Array
+XmlConverter
 =========
 Small class converting xml to associative array
 
@@ -7,25 +7,53 @@ Installation
 
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
-Either run
-
+Add the following to the repository section of your composer.json:
 ```
-php composer.phar require --prefer-dist uitrix/yii2-xmltoarray "*"
+  {
+    "type": "vcs",
+    "url": "git://github.com/Uitrix/yii2-xmltoarray.git"
+  }
 ```
-
-or add
-
+and the following to the require section of the composer.json:
 ```
 "uitrix/yii2-xmltoarray": "*"
 ```
 
-to the require section of your `composer.json` file.
-
-
 Usage
 -----
 
-Once the extension is installed, simply use it in your code by  :
+Once the extension is installed, use it like the following:
 
-```php
-<?= \uitrix\xmltoarray\AutoloadExample::widget(); ?>```
+export namespace:
+```
+use uitrix\xmltoarray\XmlConverter;
+```
+
+then:
+```
+$xml = <<<xml
+<?xml version="1.0" encoding="UTF-8"?>
+<note>
+	<to>Tove</to>
+	<from>Jani</from>
+	<heading>Reminder</heading>
+	<body>Don't forget me <hl>this weekend!</hl></body>
+</note>
+xml;
+		$conv = new XmlConverter($xml);
+		$array = $conv->createArray();
+		var_export($array);
+```
+
+Result of the execution of such a code will be:
+```
+array (
+  'note' => 
+  array (
+    'to' => 'Tove',
+    'from' => 'Jani',
+    'heading' => 'Reminder',
+    'body' => 'Don\'t forget me <hl>this weekend!</hl>',
+  ),
+)
+```
