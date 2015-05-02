@@ -1,6 +1,7 @@
 XmlConverter
 =========
 Small class converting xml to associative array
+This class is based on the work of Lalit Patel (original code: http://www.lalit.org/lab/convert-xml-to-array-in-php-xml2array/) and is restructured and functionalities are fixed a bit.
 
 Installation
 ------------
