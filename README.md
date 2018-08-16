@@ -13,12 +13,12 @@ Add the following to the repository section of your composer.json:
 ```
   {
     "type": "vcs",
-    "url": "git://github.com/Uitrix/yii2-xmltoarray.git"
+    "url": "git://github.com/Uitrix/xmltoarray.git"
   }
 ```
 and the following to the require section of the composer.json:
 ```
-"uitrix/yii2-xmltoarray": "*"
+"uitrix/xmltoarray": "*"
 ```
 
 Usage
